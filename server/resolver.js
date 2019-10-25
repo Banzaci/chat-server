@@ -1,4 +1,5 @@
 const CHAT_CHANNEL = 'CHAT_CHANNEL';
+
 let chats = [
   { id: 1, from: 'admin', content: 'testing 1', createdAt: '' },
   { id: 2, from: 'admin', content: 'testing 2', createdAt: '' },
@@ -12,11 +13,7 @@ export default {
   },
   Mutation: {
     createChat: (root, { content, from }, { pubsub }) => {
-      const id =
-        '_' +
-        Math.random()
-          .toString(36)
-          .substr(2, 9);
+      const id = '_' + Math.random().toString(36).substr(2, 9);
       const chat = {
         id,
         content,
@@ -31,7 +28,6 @@ export default {
       return chat;
     }
   },
-
   Subscription: {
     messageSent: {
       subscribe: (root, args, { pubsub }) => {
