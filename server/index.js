@@ -20,17 +20,6 @@ const server = new GraphQLServer({
   }
 });
 
-server.start(({ port }) => console.log(`http://localhost${port}`));
+server.start(({ port }) => console.log(`http://localhost:${port}`));
 
 // https://github.com/JoaoPauloCMarra/graphql-chat-sample/tree/master/frontend/src
-
-
-
-// const server = new ApolloServer({
-//   typeDefs: [typeDef, books.typeDef],
-//   resolvers: [ books.resolvers ],
-// });
-
-// server.listen().then(({ url }) => {
-//   console.log(`🚀  Server ready at ${url}`);
-// });
