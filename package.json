@@ -20,7 +20,7 @@
     "mongoose": "^5.7.6",
     "redis": "^2.8.0",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^0.17.5"
+    "type-graphql": "^0.17.6"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
